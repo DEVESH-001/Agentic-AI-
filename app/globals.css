@@ -39,7 +39,8 @@
   --shadow-brand: -82px 54px 27px 0px rgba(0, 0, 0, 0.01),
     -52px 35px 25px 0px rgba(0, 0, 0, 0.04),
     -29px 19px 21px 0px rgba(0, 0, 0, 0.15),
-    -13px 9px 15px 0px rgba(0, 0, 0, 0.25), -3px 2px 9px 0px rgba(0, 0, 0, 0.29);
+    -13px 9px 15px 0px rgba(0, 0, 0, 0.25),
+    -3px 2px 9px 0px rgba(0, 0, 0, 0.29);
 
 }
 
@@ -81,7 +82,8 @@
   --shadow-brand: -82px 54px 27px 0px rgba(255, 255, 255, 0.01),
     -52px 35px 25px 0px rgba(255, 255, 255, 0.04),
     -29px 19px 21px 0px rgba(255, 255, 255, 0.15),
-    -13px 9px 16px 0px rgba(255, 255, 255, 0.25), -3px 2px 9px 0px rgba(255, 255, 255, 0.29);
+    -13px 9px 16px 0px rgba(255, 255, 255, 0.25),
+    -3px 2px 9px 0px rgba(255, 255, 255, 0.29);
 
 }
 
@@ -127,7 +129,7 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  --shadow-brand: var(--shadow-brand-var);
+  --shadow-brand: var(--shadow-brand);
 }
 
 
