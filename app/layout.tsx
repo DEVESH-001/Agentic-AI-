@@ -3,7 +3,8 @@ import { Geist, Geist_Mono, Manrope } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/providers/theme-providers";
-import Navbar from "@/components/navbar";
+import { Navbar } from "@/components/navbar";
+
 
 const inter = Inter({
   variable: "--font-inter",
