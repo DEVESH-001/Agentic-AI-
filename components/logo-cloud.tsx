@@ -26,12 +26,12 @@ const LogoCloud = () => {
       src: "https://assets.aceternity.com/logos/oracle.png",
     },
     {
-      title: "Open AI",
+      title: "Claude",
       src: "https://assets.aceternity.com/logos/openai.png",
     },
   ];
   return (
-    <section className="pb-10 md:pb-20 lg:pb-32 ">
+    <section className="pt-20 pb-10 md:pb-10 ">
       <h2 className="mx-auto max-w-xl text-center text-lg text-neutral-500 dark:text-neutral-400">
         Trusted by modern operators across industries <br />{" "}
         <span className="font-medium text-neutral-600">
