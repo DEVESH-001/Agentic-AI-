@@ -1,16 +1,13 @@
-import Link from "next/link";
 import { Container } from "./container";
 import Heading from "./heading";
 import SubHeading from "./subheading";
 import { Button } from "./ui/button";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { MotionConfig } from "motion/react";
 import LandingImages from "./landing-images";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="pt-10 md:pt-20 lg:pt-32">
+    <section className="pt-10 md:pt-20 lg:pt-32">
       <Container>
         <Heading as="h1">
           Agents that do the work <br /> Approvals that keep things moving
@@ -30,9 +27,8 @@ const Hero = () => {
         </div>
 
         <LandingImages />
-        
       </Container>
-    </div>
+    </section>
   );
 };
 

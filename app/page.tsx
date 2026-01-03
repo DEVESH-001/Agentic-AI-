@@ -1,10 +1,11 @@
 import Hero from "@/components/hero";
-import ModeToggle from "@/components/mode-toggle";
+import LogoCloud from "@/components/logo-cloud";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
+      <LogoCloud />
     </div>
   );
 }
