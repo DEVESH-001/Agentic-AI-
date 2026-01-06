@@ -9,7 +9,7 @@ export const Card = ({
 }) => {
   return (
     <div
-      className={cn("rounded-lg bg-neutral-100 dark:bg-neutral-800", className)}
+      className={cn("rounded-lg bg-neutral-50 dark:bg-neutral-800", className)}
     >
       {children}
     </div>
@@ -75,6 +75,14 @@ export const CardSekeleton = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div className={cn("min-h-40 md:min-h-80", className)}>{children}</div>
+    <div
+      className={cn(
+        "relative h-40 overflow-hidden perspective-distant md:h-80",
+        className,
+      )}
+    >
+      <div className="absolute inset-0 z-40 h-full w-full mask-radial-from-50%"></div>
+      {children}
+    </div>
   );
 };

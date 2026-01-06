@@ -3,6 +3,7 @@ import { Container } from "../container";
 import Heading from "../heading";
 import SubHeading from "../subheading";
 import { Card, CardContent, CardCTA, CardSekeleton, CardTitle } from "./card";
+import { SkeletonOne } from "./skeletons/first";
 
 const Features = () => {
   return (
@@ -21,7 +22,9 @@ const Features = () => {
       {/* Feature cards */}
       <div className="my-10 grid grid-cols-1 gap-4 md:my-20 md:grid-cols-3">
         <Card className="rounded-tl-3xl rounded-bl-3xl">
-          <CardSekeleton></CardSekeleton>
+          <CardSekeleton>
+            <SkeletonOne />
+          </CardSekeleton>
           <CardContent>
             <CardTitle>Prebuilt Agents, Tuned for Your Workflow</CardTitle>
             <CardCTA>
