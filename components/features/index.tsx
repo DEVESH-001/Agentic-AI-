@@ -4,6 +4,9 @@ import Heading from "../heading";
 import SubHeading from "../subheading";
 import { Card, CardContent, CardCTA, CardSekeleton, CardTitle } from "./card";
 import { SkeletonOne } from "./skeletons/first";
+import { SkeletonThree } from "./skeletons/third";
+import { SkeletonTwo } from "./skeletons/second";
+
 
 const Features = () => {
   return (
@@ -33,7 +36,9 @@ const Features = () => {
           </CardContent>
         </Card>
         <Card>
-          <CardSekeleton></CardSekeleton>
+          <CardSekeleton>
+            <SkeletonTwo />
+          </CardSekeleton>
           <CardContent>
             <CardTitle>Automate Handoffs, Reduce Ops Friction</CardTitle>
             <CardCTA>
@@ -42,7 +47,9 @@ const Features = () => {
           </CardContent>
         </Card>
         <Card className="rounded-tr-3xl rounded-br-3xl">
-          <CardSekeleton></CardSekeleton>
+          <CardSekeleton>
+            <SkeletonThree />
+          </CardSekeleton>
           <CardContent>
             <CardTitle>Approvals, Gurdrails,and Full Auditablity</CardTitle>
             <CardCTA>

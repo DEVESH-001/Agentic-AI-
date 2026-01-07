@@ -9,10 +9,9 @@ import {
 export const SkeletonOne = () => {
   return (
     <div
-      style={{
-        transform: "rotateZ(15deg) rotateX(30deg) rotateY(-20deg) scale(1.2)",
-      }}
-      className="h-full w-full -translate-x-10 mask-r-from-50% mask-radial-from-50% perspective-distant"
+      className={cn(
+        "h-full w-full max-w-[85%] -translate-y-10 scale-[1.2] rotate-x-30 -rotate-y-20 rotate-z-15 mask-r-from-50% mask-radial-from-50% perspective-distant",
+      )}
     >
       <SkeletonCard
         className="absolute bottom-0 left-12 z-30 max-w-[90%]"
@@ -22,7 +21,7 @@ export const SkeletonOne = () => {
         badge={<Badge variant="danger" text="120s" />}
       />
       <SkeletonCard
-        className="absolute bottom-10 left-8 z-20"
+        className="absolute bottom-10 left-8 z-20 max-w-[90%]"
         icon={<IconCircleDashedCheck className="size-4" />}
         title="Issue Tracker"
         description="Creates clear, ready-to-use campaign briefs using product info, audience data, and past results."
