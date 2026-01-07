@@ -7,7 +7,6 @@ import { SkeletonOne } from "./skeletons/first";
 import { SkeletonThree } from "./skeletons/third";
 import { SkeletonTwo } from "./skeletons/second";
 
-
 const Features = () => {
   return (
     <Container className="py-10 md:py-20 lg:py-32">
