@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="pt-10 md:pt-20 lg:pt-32">
+    <section className="relative overflow-hidden pt-10 md:pt-20 lg:pt-32">
       <Container>
         <Heading as="h1">
           Agents that do the work <br /> Approvals that keep things moving

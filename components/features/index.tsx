@@ -10,11 +10,11 @@ import { SkeletonTwo } from "./skeletons/second";
 const Features = () => {
   return (
     <Container className="py-10 md:py-20 lg:py-32">
-      <div className="flex items-baseline-last justify-between gap-10">
-        <Heading>
+      <div className="flex flex-col justify-between gap-10 lg:flex-row lg:items-baseline-last">
+        <Heading className="text-center lg:text-left">
           Built For Fast Moving <br /> Teams That Need Control
         </Heading>
-        <SubHeading>
+        <SubHeading className="mx-auto text-center lg:mx-0 lg:text-left">
           We build AI-powered agents that handle web development tasks, while
           you focus on approving their work. Fast, efficient, and hassle-free
           development.
@@ -22,7 +22,7 @@ const Features = () => {
       </div>
 
       {/* Feature cards */}
-      <div className="my-10 grid grid-cols-1 gap-4 md:my-20 md:grid-cols-3">
+      <div className="my-10 grid grid-cols-1 gap-4 md:my-20 lg:grid-cols-3">
         <Card className="rounded-tl-3xl rounded-bl-3xl">
           <CardSekeleton>
             <SkeletonOne />

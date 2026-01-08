@@ -9,7 +9,10 @@ export const Card = ({
 }) => {
   return (
     <div
-      className={cn("rounded-lg bg-neutral-50 dark:bg-neutral-800", className)}
+      className={cn(
+        "mx-auto max-w-xl rounded-lg bg-neutral-50 dark:bg-neutral-800",
+        className,
+      )}
     >
       {children}
     </div>
@@ -77,11 +80,10 @@ export const CardSekeleton = ({
   return (
     <div
       className={cn(
-        "relative h-40 overflow-hidden perspective-distant md:h-80",
+        "relative h-80 overflow-hidden perspective-distant sm:h-60 md:h-80",
         className,
       )}
     >
-      <div className="absolute inset-0 z-40 h-full w-full mask-radial-from-50%"></div>
       {children}
     </div>
   );

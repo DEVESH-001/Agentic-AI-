@@ -7,7 +7,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero />
       <LogoCloud />
-      <Features/>
+      <Features />
     </div>
   );
 }
