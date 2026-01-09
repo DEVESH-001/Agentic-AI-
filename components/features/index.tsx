@@ -9,7 +9,7 @@ import { SkeletonTwo } from "./skeletons/second";
 
 const Features = () => {
   return (
-    <Container className="py-10 md:py-20 lg:py-32">
+    <Container className="py-10 md:py-20 lg:py-32 relative">
       <div className="flex flex-col justify-between gap-10 lg:flex-row lg:items-baseline-last">
         <Heading className="text-center lg:text-left">
           Built For Fast Moving <br /> Teams That Need Control

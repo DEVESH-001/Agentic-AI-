@@ -14,7 +14,7 @@ const LandingImages = ({
       {showGradient && (
         <div className="absolute inset-x-0 z-50 h-full w-full mask-t-from-10%"></div>
       )}
-      <div className="relative min-h-72 w-full translate-x-20 overflow-hidden pt-20 perspective-distant sm:min-h-80 md:min-h-100 lg:min-h-140">
+      <div className="relative min-h-72 w-full overflow-hidden pt-20 perspective-distant sm:min-h-80 md:min-h-100 lg:min-h-140">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
