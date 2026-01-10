@@ -57,8 +57,8 @@ export default function RootLayout({
         >
           <main className="bg-background text-foreground">
             <Navbar />
-            <Analytics/>
             {children}
+            <Analytics />
           </main>
         </ThemeProvider>
       </body>
