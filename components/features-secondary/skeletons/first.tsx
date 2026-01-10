@@ -5,8 +5,10 @@ import {
   FileIcon,
   GoogleSheetsIcon,
   HubspotIcon,
+  HumanIcon,
   SalesForceIcon,
 } from "@/icons";
+import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
 export const SkeletonOne = () => {
@@ -23,16 +25,25 @@ export const SkeletonOne = () => {
         ]}
       />
       <Card
-        topIcon={<CogIcon className="size-6" />}
-        title="Connect Data"
-        description="Integrate with various data sources to centralize information."
+        topIcon={<HumanIcon className="size-6" />}
+        title="Human-in-the-Loop"
+        description="Add reviews, approvals and escalations without slowing work."
         tags={[
-          { text: "Hubspot", icon: <HubspotIcon className="size-3" /> },
+          { text: "Hubspot", icon: <CogIcon className="size-3" /> },
           { text: "Salesforce", icon: <SalesForceIcon className="size-3" /> },
           { text: "Sheets", icon: <GoogleSheetsIcon className="size-3" /> },
         ]}
       />
-     
+      <Card
+        topIcon={<CogIcon className="size-6" />}
+        title="Define Processing Logic"
+        description="Create workflows, decision points, and conditional actions for each task."
+        tags={[
+          { text: "Hubspot", icon: <CogIcon className="size-3" /> },
+          { text: "Salesforce", icon: <SalesForceIcon className="size-3" /> },
+          { text: "Sheets", icon: <GoogleSheetsIcon className="size-3" /> },
+        ]}
+      />
     </div>
   );
 };
@@ -48,9 +59,22 @@ const Card = ({
   description: string;
   tags: { text: string; icon: React.ReactNode }[];
 }) => {
+  const randomColors = [
+    "var(--color-blue-500)",
+    "var(--color-green-500)",
+    "var(--color-red-500)",
+  ];
   return (
     <div className="flex items-start gap-4 rounded-[16px] border border-transparent bg-white p-4 ring-1 shadow-black/10 ring-black/10 dark:bg-neutral-800">
-      <div className="mt-1 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue-500">
+      <div
+        className={cn(
+          "mt-1 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue-500",
+        )}
+        style={{
+          backgroundColor:
+            randomColors[Math.floor(Math.random() * randomColors.length)],
+        }}
+      >
         {topIcon}
       </div>
       <div>

@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Container } from "../container";
 import { cn } from "@/lib/utils";
 import { SkeletonOne } from "./skeletons/first";
+import { SkeletonTwo } from "./skeletons/second";
 
 export const FeaturesSecondary = () => {
   return (
@@ -33,7 +34,9 @@ export const FeaturesSecondary = () => {
                 Coordinate multiple agents across workflows using memory,
                 interrupts, and conditional logic.
               </CardDescription>
-              <CardSekeleton></CardSekeleton>
+              <CardSekeleton>
+                <SkeletonTwo />
+              </CardSekeleton>
             </CardContent>
           </div>
         </div>
@@ -41,8 +44,6 @@ export const FeaturesSecondary = () => {
     </section>
   );
 };
-
-
 
 export const CardContent = ({ children }: { children: React.ReactNode }) => {
   return <div className="p-4 md:p-8">{children}</div>;

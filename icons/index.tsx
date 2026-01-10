@@ -299,3 +299,94 @@ export const SettingIcon = (props: React.SVGAttributes<SVGSVGElement>) => {
     </svg>
   );
 };
+
+export const HumanIcon = (props: React.SVGAttributes<SVGSVGElement>) => {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="size-4 text-white"
+      {...props}
+    >
+      <path
+        d="M2.95697 12.7C2.88417 12.7 2.81047 12.6897 2.73777 12.6673C1.99557 12.4412 1.49707 11.7723 1.49707 11.0027V2.75858C1.49707 2.19218 1.77298 1.65898 2.23538 1.33278C2.69828 1.00608 3.29247 0.926586 3.82567 1.11358C7.25727 2.33088 10.7378 2.33138 14.1685 1.11308C14.7017 0.924586 15.2963 1.00568 15.7587 1.33228C16.2212 1.65848 16.497 2.19168 16.497 2.75758V11.0032C16.497 11.7732 15.9985 12.4422 15.2558 12.6678C14.8598 12.7884 14.4409 12.5643 14.3203 12.1678C14.2002 11.7713 14.4239 11.3529 14.8203 11.2323C14.9018 11.2079 14.9972 11.1327 14.9972 11.0033V2.75758C14.9972 2.64718 14.9323 2.58468 14.8937 2.55738C14.8551 2.53008 14.7746 2.48808 14.6706 2.52708C10.906 3.86208 7.08807 3.86158 3.32437 2.52758C3.21887 2.49048 3.13887 2.53048 3.10077 2.55788C3.06217 2.58518 2.99727 2.64768 2.99727 2.75858V11.0027C2.99727 11.1321 3.09347 11.2073 3.17547 11.2327C3.57147 11.3533 3.79507 11.7723 3.67397 12.1687C3.57537 12.4919 3.27827 12.7 2.95697 12.7Z"
+        fill="currentColor"
+      ></path>
+      <path
+        d="M8.99902 9.5C10.2416 9.5 11.249 8.49264 11.249 7.25C11.249 6.00736 10.2416 5 8.99902 5C7.75638 5 6.74902 6.00736 6.74902 7.25C6.74902 8.49264 7.75638 9.5 8.99902 9.5Z"
+        fill="currentColor"
+      ></path>
+      <path
+        d="M13.4606 14.5661C13.0055 12.5002 11.1291 11.0012 8.99821 11.0012C6.86731 11.0012 4.99091 12.5002 4.53581 14.5666C4.35171 15.405 4.87561 16.2634 5.72871 16.5207C6.78831 16.8395 7.88841 17.0012 8.99821 17.0012C10.1037 17.0012 11.2033 16.8396 12.2672 16.5207C13.1212 16.2639 13.6451 15.4055 13.4606 14.5661Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  );
+};
+
+export const ChatGptIcon = (props: React.SVGAttributes<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="tabler-icon tabler-icon-brand-slack size-8"
+      {...props}
+    >
+      <path d="M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6"></path>
+      <path d="M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6"></path>
+      <path d="M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6"></path>
+      <path d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6"></path>
+    </svg>
+  );
+};
+
+export const MetaIcon = (props: React.SVGAttributes<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="tabler-icon tabler-icon-brand-meta size-8 text-blue-500"
+      {...props}
+    >
+      <path d="M12 10.174c1.766 -2.784 3.315 -4.174 4.648 -4.174c2 0 3.263 2.213 4 5.217c.704 2.869 .5 6.783 -2 6.783c-1.114 0 -2.648 -1.565 -4.148 -3.652a27.627 27.627 0 0 1 -2.5 -4.174z"></path>
+      <path d="M12 10.174c-1.766 -2.784 -3.315 -4.174 -4.648 -4.174c-2 0 -3.263 2.213 -4 5.217c-.704 2.869 -.5 6.783 2 6.783c1.114 0 2.648 -1.565 4.148 -3.652c1 -1.391 1.833 -2.783 2.5 -4.174z"></path>
+    </svg>
+  );
+};
+
+export const InstaIcon = (props: React.SVGAttributes<SVGSVGElement>) => {
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="tabler-icon tabler-icon-brand-instagram size-8 text-red-500"
+    {...props}
+  >
+    <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+    <path d="M16.5 7.5v.01"></path>
+  </svg>;
+};
