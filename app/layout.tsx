@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/providers/theme-providers";
 import { Navbar } from "@/components/navbar";
-
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -56,8 +56,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="bg-background text-foreground">
-            <Navbar/>
-          {children}</main>
+            <Navbar />
+            <Analytics/>
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
