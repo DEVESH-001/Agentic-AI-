@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const SkeletonTwo = () => {
   return (
-    <div className="flex h-full w-full flex-1 flex-col items-center justify-center gap-4 space-y-4 rounded-t-3xl px-8">
+    <div className="flex h-full w-full flex-1 flex-col items-center justify-center gap-4 space-y-4 rounded-t-3xl px-18 pt-14">
       <div className="mx-auto grid max-w-md grid-cols-4 justify-center gap-2">
         <Item />
         <Item src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
@@ -15,7 +15,7 @@ export const SkeletonTwo = () => {
         <Item />
       </div>
       {/* 2nd row */}
-      <div className="grid grid-cols-5 gap-2">
+      <div className="mx-auto grid max-w-md grid-cols-5 justify-center gap-2">
         <Item />
         <Item src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 

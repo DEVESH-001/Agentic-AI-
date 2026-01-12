@@ -3,16 +3,16 @@ import { motion } from "motion/react";
 import { Container } from "../container";
 import { cn } from "@/lib/utils";
 import { SkeletonOne } from "./skeletons/first";
-
 import { HumanInLoopIcon, IntegrationIcon, WorkFlowIcon } from "@/icons";
 import { SkeletonTwo } from "./skeletons/second";
+import { SkeletonThree } from "./skeletons/three";
 
 export const FeaturesTertiary = () => {
   return (
     <section className="relative overflow-hidden pt-10 md:pt-20 lg:pt-32">
       <Container>
-        <div className="grid grid-cols-1 divide-x divide-y divide-neutral-200 border-t border-b border-neutral-200 md:grid-cols-2 md:divide-x md:divide-y-0 dark:divide-neutral-800 dark:border-t dark:border-b dark:border-neutral-800">
-          <div>
+        <div className="grid grid-cols-1 divide-neutral-200 border-t border-b border-neutral-200 md:grid-cols-2 dark:divide-neutral-800 dark:border-t dark:border-b dark:border-neutral-800">
+          <div className="border-b border-neutral-200 dark:border-neutral-800 md:border-b md:border-r">
             <CardContent>
               <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
                 Audit Trail
@@ -27,7 +27,7 @@ export const FeaturesTertiary = () => {
             </CardSekeleton>
           </div>
 
-          <div>
+          <div className="border-b border-neutral-200 dark:border-neutral-800">
             <CardContent>
               <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
                 Role-Based Access
@@ -38,6 +38,21 @@ export const FeaturesTertiary = () => {
               </CardDescription>
               <CardSekeleton className="mask-radial-from-20%">
                 <SkeletonTwo />
+              </CardSekeleton>
+            </CardContent>
+          </div>
+
+          <div className="md:border-r border-neutral-200 dark:border-neutral-800">
+            <CardContent>
+              <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
+                Approval Queue
+              </h2>
+              <CardDescription>
+                Sends agent-generated content to human reviewers before it's
+                published.
+              </CardDescription>
+              <CardSekeleton className="mask-r-from-50% mask-radial-from-20%">
+                <SkeletonThree />
               </CardSekeleton>
             </CardContent>
           </div>

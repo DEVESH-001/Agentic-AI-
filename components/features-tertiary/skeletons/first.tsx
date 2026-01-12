@@ -88,7 +88,7 @@ export const SkeletonOne = () => {
     },
   ];
   return (
-    <div className="absolute inset-x-10 inset-y-2 mx-auto flex h-full w-full flex-1 flex-col gap-2 rounded-tl-2xl border border-neutral-200 bg-neutral-100 p-2 px-2">
+    <div className="absolute inset-x-10 inset-y-2 mx-auto flex h-full w-full flex-1 flex-col gap-2 rounded-tl-3xl border border-neutral-200 bg-neutral-100 px-2 pt-2">
       <Card>
         {cardItems.map((item, index) => (
           <motion.div
