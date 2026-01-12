@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { SkeletonOne } from "./skeletons/first";
 
 import { HumanInLoopIcon, IntegrationIcon, WorkFlowIcon } from "@/icons";
-import SkeletonTwo from "./skeletons/second";
+import { SkeletonTwo } from "./skeletons/second";
 
 export const FeaturesTertiary = () => {
   return (
@@ -36,7 +36,7 @@ export const FeaturesTertiary = () => {
                 Controls who can launch, review, or manage agents based on
                 roles.
               </CardDescription>
-              <CardSekeleton>
+              <CardSekeleton className="mask-radial-from-20%">
                 <SkeletonTwo />
               </CardSekeleton>
             </CardContent>

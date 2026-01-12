@@ -59,11 +59,13 @@ const Card = ({
   description: string;
   tags: { text: string; icon: React.ReactNode }[];
 }) => {
-  const randomColors = [
+  const colors = [
     "var(--color-blue-500)",
     "var(--color-green-500)",
     "var(--color-red-500)",
   ];
+  // Use title to deterministically pick a color
+  const colorIndex = title.charCodeAt(0) % colors.length;
   return (
     <div className="flex items-start gap-4 rounded-[16px] border border-transparent bg-white p-4 ring-1 shadow-black/10 ring-black/10 dark:bg-neutral-800">
       <div
@@ -71,8 +73,7 @@ const Card = ({
           "mt-1 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue-500",
         )}
         style={{
-          backgroundColor:
-            randomColors[Math.floor(Math.random() * randomColors.length)],
+          backgroundColor: colors[colorIndex],
         }}
       >
         {topIcon}
