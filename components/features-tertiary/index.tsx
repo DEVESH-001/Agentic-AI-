@@ -6,13 +6,14 @@ import { SkeletonOne } from "./skeletons/first";
 import { HumanInLoopIcon, IntegrationIcon, WorkFlowIcon } from "@/icons";
 import { SkeletonTwo } from "./skeletons/second";
 import { SkeletonThree } from "./skeletons/three";
+import { SkeletonFour } from "./skeletons/four";
 
 export const FeaturesTertiary = () => {
   return (
     <section className="relative overflow-hidden pt-10 md:pt-20 lg:pt-32">
       <Container>
         <div className="grid grid-cols-1 divide-neutral-200 border-t border-b border-neutral-200 md:grid-cols-2 dark:divide-neutral-800 dark:border-t dark:border-b dark:border-neutral-800">
-          <div className="border-b border-neutral-200 dark:border-neutral-800 md:border-b md:border-r">
+          <div className="border-r border-b border-neutral-200 dark:border-neutral-800">
             <CardContent>
               <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
                 Audit Trail
@@ -42,7 +43,7 @@ export const FeaturesTertiary = () => {
             </CardContent>
           </div>
 
-          <div className="md:border-r border-neutral-200 dark:border-neutral-800">
+          <div className="border-r border-neutral-200 dark:border-neutral-800">
             <CardContent>
               <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
                 Approval Queue
@@ -53,6 +54,20 @@ export const FeaturesTertiary = () => {
               </CardDescription>
               <CardSekeleton className="mask-r-from-50% mask-radial-from-20%">
                 <SkeletonThree />
+              </CardSekeleton>
+            </CardContent>
+          </div>
+
+          <div className="border-neutral-200 dark:border-neutral-800">
+            <CardContent>
+              <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
+                Guardrail Engine
+              </h2>
+              <CardDescription>
+                Applies brand, tone, and policy checks before output goes live.
+              </CardDescription>
+              <CardSekeleton>
+                <SkeletonFour />
               </CardSekeleton>
             </CardContent>
           </div>

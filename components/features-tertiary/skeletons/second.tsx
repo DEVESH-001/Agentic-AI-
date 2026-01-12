@@ -20,7 +20,7 @@ export const SkeletonTwo = () => {
         <Item src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 
         <Item containerClassName="from-black/50 via-transparent to-black/50">
-          <div className="flex h-full w-full items-center justify-center rounded-[12px] bg-white">
+          <div className="flex h-full w-full items-center justify-center rounded-2xl bg-white">
             <Logo className="size-12" />
           </div>
         </Item>
@@ -66,7 +66,7 @@ const Item = ({
           delay: Math.random() * 0.8 + 0.2,
         }}
         className={cn(
-          "relative z-10 flex h-full w-full items-center justify-center rounded-[12px] p-px",
+          "relative z-10 flex h-full w-full items-center justify-center rounded-2xl p-px",
           src && "bg-linear-to-br from-blue-500 via-transparent to-blue-500",
           containerClassName,
         )}
@@ -79,7 +79,7 @@ const Item = ({
                 alt="Skeleton Image"
                 height={120}
                 width={120}
-                className="relative z-20 aspect-square rounded-[12px] object-cover"
+                className="relative z-20 aspect-square rounded-2xl object-cover"
               />
             )}
           </>

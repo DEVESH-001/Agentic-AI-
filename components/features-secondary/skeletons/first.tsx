@@ -13,9 +13,9 @@ import { motion } from "motion/react";
 
 export const SkeletonOne = () => {
   return (
-    <div className="absolute inset-x-0 mx-auto h-full w-full max-w-sm flex-1 rounded-t-3xl border border-neutral-200 bg-neutral-100 p-2 dark:bg-neutral-900">
+    <div className="absolute inset-x-0 mx-auto flex h-full w-full max-w-[20rem] flex-1 flex-col gap-2 rounded-t-3xl border border-neutral-200 bg-neutral-100 p-2 lg:max-w-sm dark:bg-neutral-900">
       <Card
-        topIcon={<FileIcon className="size-6" />}
+        topIcon={<FileIcon className="size-4" />}
         title="Connect Data"
         description="Integrate with various data sources to centralize information."
         tags={[
@@ -25,17 +25,17 @@ export const SkeletonOne = () => {
         ]}
       />
       <Card
-        topIcon={<HumanIcon className="size-6" />}
+        topIcon={<HumanIcon className="size-4" />}
         title="Human-in-the-Loop"
         description="Add reviews, approvals and escalations without slowing work."
         tags={[
-          { text: "Hubspot", icon: <CogIcon className="size-3" /> },
+          { text: "Hubspot", icon: <HubspotIcon className="size-3" /> },
           { text: "Salesforce", icon: <SalesForceIcon className="size-3" /> },
           { text: "Sheets", icon: <GoogleSheetsIcon className="size-3" /> },
         ]}
       />
       <Card
-        topIcon={<CogIcon className="size-6" />}
+        topIcon={<CogIcon className="size-4" />}
         title="Define Processing Logic"
         description="Create workflows, decision points, and conditional actions for each task."
         tags={[
@@ -67,7 +67,7 @@ const Card = ({
   // Use title to deterministically pick a color
   const colorIndex = title.charCodeAt(0) % colors.length;
   return (
-    <div className="flex items-start gap-4 rounded-[16px] border border-transparent bg-white p-4 ring-1 shadow-black/10 ring-black/10 dark:bg-neutral-800">
+    <div className="flex items-start gap-4 rounded-3xl border border-transparent bg-white p-4 ring-1 shadow-black/10 ring-black/10 dark:bg-neutral-800">
       <div
         className={cn(
           "mt-1 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue-500",
