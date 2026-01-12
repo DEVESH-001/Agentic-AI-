@@ -1,5 +1,6 @@
 import Features from "@/components/features";
 import { FeaturesSecondary } from "@/components/features-secondary";
+import { FeaturesTertiary } from "@/components/features-tertiary";
 import Hero from "@/components/hero";
 import LogoCloud from "@/components/logo-cloud";
 import { Outcomes } from "@/components/outcomes";
@@ -15,6 +16,7 @@ export default function Home() {
       <Speed />
       <FeaturesSecondary />
       <Outcomes />
+      <FeaturesTertiary/>
     </div>
   );
 }
