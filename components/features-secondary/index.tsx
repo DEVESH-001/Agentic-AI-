@@ -10,7 +10,7 @@ export const FeaturesSecondary = () => {
   return (
     <section className="relative overflow-hidden pt-10 md:pt-20 lg:pt-32">
       <Container>
-        <div className="grid grid-cols-1 divide-x divide-y divide-neutral-200 border-t border-b border-neutral-200 md:grid-cols-2 md:divide-x md:divide-y-0 dark:divide-neutral-800 dark:border-t dark:border-b dark:border-neutral-800">
+        <div className="grid grid-cols-1 divide-y divide-neutral-200 border-t border-b border-neutral-200 md:grid-cols-2 md:divide-x md:divide-y-0 dark:divide-neutral-800 dark:border-t dark:border-b dark:border-neutral-800">
           <div>
             <CardContent>
               <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">

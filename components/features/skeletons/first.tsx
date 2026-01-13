@@ -60,12 +60,12 @@ const SkeletonCard = ({
     >
       <div className="flex items-center gap-3">
         {icon}
-        <p className="text-sm font-normal text-black dark:text-white">
+        <p className="text-xs font-normal text-black md:text-sm dark:text-white">
           {title}
         </p>
         {badge}
       </div>
-      <p className="mt-3 text-sm font-light text-neutral-500 dark:text-neutral-400">
+      <p className="mt-3 text-[10px] font-light text-neutral-500 md:text-sm dark:text-neutral-400">
         {description}
       </p>
       <div className="mt-4 flex flex-wrap items-center gap-2">
@@ -79,7 +79,7 @@ const SkeletonCard = ({
 
 const Tag = ({ text }: { text: string }) => {
   return (
-    <div className="rounded-sm bg-neutral-200 px-2 py-1 text-xs dark:bg-neutral-700">
+    <div className="rounded-sm bg-neutral-200 px-2 py-1 text-[10px] md:text-sm dark:bg-neutral-700">
       {text || "Marketing"}
     </div>
   );

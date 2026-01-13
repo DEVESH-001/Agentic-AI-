@@ -13,7 +13,7 @@ const Heading = ({
   return (
     <Tag
       className={cn(
-        "font-display text-2xl font-bold tracking-tight md:text-4xl lg:text-6xl",
+        "font-display text-3xl font-bold tracking-tight md:text-4xl lg:text-6xl",
         className,
       )}
     >
