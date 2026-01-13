@@ -12,51 +12,63 @@ const LandingImages = ({
   return (
     <div className="relative">
       {showGradient && (
-        <div className="absolute inset-x-0 z-50 h-full w-full mask-t-from-10%"></div>
+        <div className="pointer-events-none absolute inset-0 z-30 h-full w-full   mask-r-from-25% mask-b-from-25%"></div>
       )}
-      <div className="relative min-h-72 w-full overflow-hidden pt-20 perspective-distant sm:min-h-80 md:min-h-100 lg:min-h-140">
+      <div className="relative mt-16 md:mt-20 lg:mt-24 min-h-72 w-full overflow-hidden pt-20 perspective-distant sm:min-h-80 md:min-h-100 lg:min-h-140">
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="shadow-2xl perspective-[4000px]"
+          className="absolute inset-0 z-10 shadow-2xl perspective-[4000px]"
         >
-          <Image
-            src={firstImageSrc}
-            alt="Hero image of AI agents"
-            loading="eager"
-            height={1080}
-            width={1920}
-            draggable={false}
-            className={cn(
-              "pointer-events-none absolute inset-0 rounded-lg mask-r-from-20% mask-b-from-20% shadow-xl select-none",
-            )}
-            style={{
-              transform: "rotateY(20deg) rotateX(40deg) rotateZ(-20deg)",
-            }}
-          />
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="relative h-full w-full"
+          >
+            <Image
+              src={firstImageSrc}
+              alt="Hero image of AI agents"
+              loading="eager"
+              priority
+              height={1080}
+              width={1920}
+              draggable={false}
+              className={cn(
+                "pointer-events-none absolute inset-0 rounded-lg shadow-xl select-none mask-r-from-15% mask-b-from-15% scale-105",
+              )}
+              style={{
+                transform: "rotateY(20deg) rotateX(40deg) rotateZ(-20deg)",
+              }}
+            />
+          </motion.div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
-          className="translate-x-20 -translate-y-10 perspective-[4000px] md:-translate-y-20 lg:-translate-y-40"
+          className="absolute inset-0 z-20 translate-x-20 -translate-y-10 perspective-[4000px] md:-translate-y-20 lg:-translate-y-40"
         >
-          <Image
-            src={secondImageSrc}
-            alt="Hero image of AI agents"
-            loading="eager"
-            height={1080}
-            width={1920}
-            draggable={false}
-            className={cn(
-              "pointer-events-auto absolute inset-0 -translate-x-10 rounded-lg mask-r-from-50% mask-b-from-50% shadow-xl select-none",
-            )}
-            style={{
-              transform: "rotateY(20deg) rotateX(40deg) rotateZ(-20deg)",
-            }}
-          />
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
+            className="relative h-full w-full"
+          >
+            <Image
+              src={secondImageSrc}
+              alt="Hero image of AI agents"
+              loading="eager"
+              priority
+              height={1080}
+              width={1920}
+              draggable={false}
+              className={cn(
+                "pointer-events-auto absolute inset-0 -translate-x-10 rounded-lg shadow-xl select-none mask-r-from-25% mask-b-from-25% scale-105",
+              )}
+              style={{
+                transform: "rotateY(20deg) rotateX(40deg) rotateZ(-20deg)",
+              }}
+            />
+          </motion.div>
         </motion.div>
       </div>
     </div>

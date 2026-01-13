@@ -14,7 +14,7 @@ import {
   IconPointerUp,
 } from "@tabler/icons-react";
 import { motion, px } from "motion/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const SkeletonFour = () => {
   const items = [
@@ -86,6 +86,30 @@ export const SkeletonFour = () => {
 
   const [selected, setSelected] = useState(items[0]);
 
+  useEffect(() => {
+    startAutoplay();
+    return () => stopAutoplay();
+  }, []);
+
+  // Autoplay interval reference(clear interval on component unmount)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const currentIndexRef = useRef(0);
+
+  const startAutoplay = () => {
+    stopAutoplay(); // clear any existing interval
+    intervalRef.current = setInterval(() => {
+      currentIndexRef.current = (currentIndexRef.current + 1) % items.length; // loop back to first item
+      setSelected(items[currentIndexRef.current]);
+    }, 2000);
+  };
+
+  const stopAutoplay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
   return (
     <div>
       <div className="mx-auto mt-4 mb-4 flex max-w-lg flex-wrap items-center justify-center gap-4">
@@ -94,11 +118,17 @@ export const SkeletonFour = () => {
             onClick={() => setSelected(item)}
             key={index}
             className={cn(
-              "flex cursor-pointer items-center justify-center gap-1 rounded-sm px-2 py-1 text-xs opacity-50 transition duration-200 active:scale-98",
+              "relative flex cursor-pointer items-center justify-center gap-1 rounded-sm px-2 py-1 text-xs opacity-50 transition duration-200 active:scale-98",
               selected.title === item.title && "opacity-100",
               item.className,
             )}
           >
+            {selected.title === item.title && (
+              <motion.div
+                layoutId="selected-item"
+                className="absolute inset-0 rounded-[5px] shadow-inner"
+              ></motion.div>
+            )}
             {item.icons}
             {item.title}
           </button>

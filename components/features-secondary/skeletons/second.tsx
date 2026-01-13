@@ -3,14 +3,18 @@
 import { Logo } from "@/components/logo";
 import { ChatGptIcon, GoogleSheetsIcon, InstaIcon, MetaIcon } from "@/icons";
 import { cn } from "@/lib/utils";
-import { IconPrison } from "@tabler/icons-react";
+import {
+  IconCircleDashedCheck,
+  IconClockCheck,
+  IconPrison,
+} from "@tabler/icons-react";
 import { motion } from "motion/react";
 
 export const SkeletonTwo = () => {
   return (
     <div
-      className="absolute inset-x-0 mx-auto flex h-full w-full flex-1 items-center justify-center gap-3 rounded-t-3xl p-2"
-      style={{transform:"rotateY(20deg) rotateX(20deg) rotateZ(-20deg)"}}
+      className="absolute inset-x-0 mx-auto flex h-full w-full flex-1 items-center justify-center gap-2 rounded-t-3xl p-2"
+      style={{ transform: "rotateY(20deg) rotateX(20deg) rotateZ(-20deg)" }}
     >
       {/* this part is to create revolving cards around a center logo */}
       <Circle className="flex items-center justify-center border-neutral-200 shadow-sm">
@@ -23,6 +27,14 @@ export const SkeletonTwo = () => {
 
         <RevolvingCard className="[--orbit-duration:20s] [--translate-position:140px]">
           <GoogleSheetsIcon className="size-6 text-green-500" />
+        </RevolvingCard>
+
+        <RevolvingCard className="size-auto w-60 bg-transparent shadow-none ring-0 [--orbit-duration:20s] [--translate-position:340px]">
+          <SkeletonCard
+            className="absolute bottom-20 left-4 z-10 max-w-[80%]"
+            icon={<IconCircleDashedCheck className="size-4" />}
+            title="Ready made solutions"
+          />
         </RevolvingCard>
 
         <RevolvingCard className="[--orbit-duration:15s] [--translate-position:140px]">
