@@ -5,7 +5,7 @@ import { Container } from "./container";
 import { Button } from "./ui/button";
 import { IconLayoutSidebar, IconX } from "@tabler/icons-react";
 import { useState } from "react";
-import { Logo, StackMintLogo } from "./logo";
+import { Logo, Logo2, StackMintLogo } from "./logo";
 import { AnimatePresence, motion } from "motion/react";
 
 export const Navbar = () => {
@@ -39,7 +39,7 @@ export const MobileNavbar = () => {
   ];
   return (
     <div className="relative flex justify-between px-4 py-2 md:hidden">
-      <Logo />
+      <Logo2 />
 
       <button onClick={() => setOpen(!open)}>
         <IconLayoutSidebar className="size-4" />
@@ -59,7 +59,7 @@ export const MobileNavbar = () => {
             className="fixed inset-0 z-50 h-full w-full px-4 py-2"
           >
             <div className="flex justify-between">
-              <Logo />
+              <Logo2 />
             </div>
             <button
               className="absolute top-2 right-2"
@@ -123,9 +123,9 @@ export const DesktopNavbar = () => {
   ];
   return (
     <Container className="hidden items-center justify-between py-4 lg:flex">
-      <Logo />
+      <Logo2 />
       {/* <StackMintLogo /> */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-10">
         {navlinks.map((link, index) => (
           <Link
             href={link.href}

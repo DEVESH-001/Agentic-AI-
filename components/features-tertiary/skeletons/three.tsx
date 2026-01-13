@@ -14,7 +14,7 @@ export function SkeletonThree() {
       <div
         className={cn(
           "flex h-[200%] items-center justify-center gap-20",
-          "absolute -inset-x-[200%] -inset-y-40",
+          "absolute -inset-x-[150%] -inset-y-40",
           "bg-size-[40px_40px]",
           "bg-[linear-gradient(to_right,var(--color-neutral-200),transparent_1px),linear-gradient(to_bottom,var(--color-neutral-200),transparent_1px)]",
           "dark:bg-[linear-gradient(to_right,var(--color-neutral-700)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-neutral-700)_1px,transparent_1px)]",

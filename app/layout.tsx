@@ -5,6 +5,7 @@ import "./globals.css";
 import ThemeProvider from "@/providers/theme-providers";
 import { Navbar } from "@/components/navbar";
 import { Analytics } from "@vercel/analytics/next";
+import { Footer } from "@/components/footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,7 +20,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "StackMint Studio",
+  title: "Agentic Studio",
   description:
     "Your AI-powered web development MVP agency. We build high-converting landing pages, create product-ready MVPs, and provide mobile app development services.",
   keywords: [
@@ -27,14 +28,14 @@ export const metadata: Metadata = {
     "AI",
     "MVP",
     "agency",
-    "StackMint Studio",
+    "Agentic Studio",
     "landing pages",
     "mobile development",
     "mobile app",
   ],
-  authors: [{ name: "StackMint Studio" }],
+  authors: [{ name: "Agentic Studio" }],
   openGraph: {
-    title: "StackMint Studio",
+    title: "Agentic Studio",
     description:
       "Your AI-powered web development MVP agency. We build high-converting landing pages, create product-ready MVPs, and provide mobile app development services.",
     type: "website",
@@ -55,11 +56,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           <main className="bg-background text-foreground">
-            <Navbar />
             {children}
             <Analytics />
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
